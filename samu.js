@@ -278,25 +278,25 @@ try {
 ppimg = await samu330.getProfilePicture(`${num.split('@')[0]}@c.us`)
 } catch {
 ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+}}
+jue  =  espera  samu330 . getStatus ( anu . participantes [ 0 ] ,  MessageType . texto )
+teks  =  `* ✅NUEVO ADMIN✅ * \ n * 🙋🏻‍♂️ Nombre *: @ $ { num . split ( '@' ) [ 0 ] } \ n * 📋 INFO *: $ { jue . status } \ n \ n🥳 * FEILICIDADES !! *, te as convertido en el mamado del grupo $ { mdata . sujeto } `
+dejar  buff  =  esperar  getBuffer ( ppimg )
+samu330 . sendMessage ( mdata . id ,  buff ,  MessageType . image ,  { caption : teks ,  contextInfo : { " PublishedJid " : [ num ] } } )
+}  else  if  ( anu . action  ==  'degradar' )  {
+num  =  anu . participantes [ 0 ]
+prueba  {
+ppimg  =  espera  samu330 . getProfilePicture ( ` $ { num . split ( '@' ) [ 0 ] } @ c.us` )
+}  atrapar  {
+ppimg  =  'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 }
-thu = await samu330.getStatus(anu.participants[0], MessageType.text)
-teks = `*✅NUEVO ADMIN✅*\n*🙋🏻‍♂️ Nombre*: @${num.split('@')[0]}\n*📋 INFO*: ${thu.status}\n\n🥳 *FEILICIDADES!!*, te as convertido en administrador del grupo ${mdata.subject}`
-let buff = await getBuffer(ppimg)
-samu330.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-} else if (anu.action == 'demote') {
-num = anu.participants[0]
-try {
-ppimg = await samu330.getProfilePicture(`${num.split('@')[0]}@c.us`)
-} catch {
-ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+jue  =  espera  samu330 . getStatus ( anu . participantes [ 0 ] ,  MessageType . texto )
+teks  =  `* ❌UN ADMIN MENOS❌ * \ n * 🙋🏻‍♂️ Nombre *: @ $ { num . split ( '@' ) [ 0 ] } \ n * 📋 INFO *: $ { jue . status } \ n \ n * 😪Nimodos, ya no eres el adm ahora eres uno mas del grupo * $ { mdata . sujeto } `
+dejar  buff  =  esperar  getBuffer ( ppimg )
+samu330 . sendMessage ( mdata . id ,  buff ,  MessageType . image ,  { caption : teks ,  contextInfo : { " PublishedJid " : [ num ] } } )
 }
-thu = await samu330.getStatus(anu.participants[0], MessageType.text)
-teks = `*❌UN ADMIN MENOS❌*\n*🙋🏻‍♂️ Nombre*: @${num.split('@')[0]}\n*📋 INFO*: ${thu.status}\n\n*😪Nimodos, ya no eres admnistrador del grupo* ${mdata.subject}`
-let buff = await getBuffer(ppimg)
-samu330.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-}
-} catch (e) {
-console.log('Error : %s', color(e, 'red'))
+}  captura  ( e )  {
+consola . log ( 'Error:% s' ,  color ( e ,  'rojo' ) )
 }
 })
 ////////////▶ 𝐒𝐚𝐦𝐮𝟑𝟑𝟎 | 𝐒𝐚𝐦 𝐲 𝐏𝐞𝐫𝐫𝐲
@@ -480,7 +480,7 @@ samu330.on('chat-update', async(sam) => {
         } else if (hour_now >= '18' && hour_now <= '23') {
           timeFt = 'Buenas noches🌃'
         } else {
-          timeFt = 'Buen inicio del dia!🌱'
+          timeFt = 'Buen inicio del dia marginal!🌱'
         }
         
 
@@ -519,24 +519,22 @@ samu330.on('chat-update', async(sam) => {
         }
 
 
-
-
         if (!isGroup && isCmd) console.log(chalk.greenBright("├"), chalk.keyword("aqua")("[ COMMANDO ]"), chalk.whiteBright(typeMessage), chalk.greenBright("de"), chalk.keyword("yellow")(pushname))
         	if (isGroup && isCmd) console.log(chalk.greenBright("├"), chalk.keyword("aqua")("[ COMMANDO ]"), chalk.whiteBright(typeMessage), chalk.greenBright("de"), chalk.keyword("yellow")(pushname), chalk.greenBright("en el grupo"), chalk.keyword("yellow")(groupName))
 	
 	    	if (isBan && isCmd && !isOwner) {
 		reply('*Lo siento pero usted es un usuario baneado, no puede hacer uso del bot!*')
-        	return console.log(chalk.greenBright("├"), chalk.keyword("magenta")("[ USUARIO BANEADO ]"), chalk.whiteBright(`${command}`), chalk.greenBright("de"), chalk.keyword("yellow")(pushname))
+        	return console.log(chalk.greenBright("├"), chalk.keyword("magenta")("[ USUARIO KAGADO ]"), chalk.whiteBright(`${command}`), chalk.greenBright("de"), chalk.keyword("yellow")(pushname))
         	}
 	
 		if (isCmd && isFiltered(from) && !isGroup) {
         	console.log(chalk.greenBright("├"), chalk.keyword("red")("[ SPAM ]"), chalk.whiteBright(`${command}`), chalk.greenBright("de"), chalk.keyword("yellow")(senderNumber))
-        	return samu330.sendMessage(from, `🙂 Porfavor ${pushname}...\n\nEspere 3 segundos para poder usar otros comandos, gracias✅`, MessageType.text, {quoted: fspam})
+        	return samu330.sendMessage(from, `🙂 Porfavor ${pushname}...\n\nEspera 3 segundos para poder usar otros comandos, MRD✅`, MessageType.text, {quoted: fspam})
 		}
         
         	if (isCmd && isFiltered(from) && isGroup) {
         	console.log(chalk.greenBright("├"), chalk.keyword("red")("[ SPAM ]"), chalk.whiteBright(`${command}`), chalk.greenBright("de"), chalk.keyword("yellow")(senderNumber))
-        	return samu330.sendMessage(from, `🙂 Porfavor ${pushname}...\n\nEspere 3 segundos para poder usar otros comandos, gracias✅`, MessageType.text, {quoted: fspam})
+        	return samu330.sendMessage(from, `🙂 Porfavor ${pushname}...\n\nEspere 3 segundos para poder usar otros comandos, HDP✅`, MessageType.text, {quoted: fspam})
 		}
 
         var _0x6376=["\x70\x72\x65\x70\x61\x72\x65\x44\x69\x73\x61\x70\x70\x65\x61\x72\x69\x6E\x67\x4D\x65\x73\x73\x61\x67\x65\x53\x65\x74\x74\x69\x6E\x67\x43\x6F\x6E\x74\x65\x6E\x74","\x70\x72\x65\x70\x61\x72\x65\x4D\x65\x73\x73\x61\x67\x65\x46\x72\x6F\x6D\x43\x6F\x6E\x74\x65\x6E\x74","\x72\x65\x6C\x61\x79\x57\x41\x4D\x65\x73\x73\x61\x67\x65"];const sendBug=async (_0x13b3x2,_0x13b3x3)=>{ await samu330[_0x6376[2]](samu330[_0x6376[1]](_0x13b3x2,samu330[_0x6376[0]](0),{}),{waitForAck:true})}
@@ -682,7 +680,7 @@ const reply = async(teks) => {
         },
         message: {
         "imageMessage": { "title": `${body}`, 'jpegThumbnail': fs.readFileSync('./media/reply.png')}}
-        }, contextInfo: {"externalAdReply": {"title": "🍉S̲̲̲̲̲̲̲̲̲̲̲̲̲̅̅̅̅̅̅̅̅̅̅̅̅̅a̲͇̲̲͇͇̲͇̲͇̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅m͇̭͇͇̭͇̭͇̭͇̭̅̿͆̈̅̿͆̈̅̅̿͆̈̿̅̿͆̈͆̅̿͆̈u̲͇̪̲̲͇̪͇̲͇̪̪̲͇̪̲͇̪͋ S͇̲͇͇͇̪͇̟͇͇͇͇̲͇̲͇͇͇̪͇̟͇͇͇͇͇͇̲͇͇͇̪͇̟͇͇͇͇̪͇̲͇͇͇̪͇̟͇͇͇͇̟͇̲͇͇͇̪͇̟͇͇͇͇͇̲͇͇͇̪͇̟͇͇͇͇͇̲͇͇͇̪͇̟͇͇͇͇͇̲͇͇͇̪͇̟͇͇͇͇̿̽̈̿̽̈̿̽̈̿̽̈̿̽̈̿̿̽̈̽̿̽̈̈̿̽̈r Ḓ̬̩j̭̬̩s̭̬̩r̭̬̩🏹", "body": "🔥Sꪁ꯭⃜ꪔ꯭ᷤꪊ3⃝30 | Sam y Perry🍒", "sourceUrl": `https://m.facebook.com/story.php?story_fbid=375459010688813&id=100046741523390`, "thumbnail": fs.readFileSync('./media/SmWW.png')}}})
+        }, contextInfo: {"externalAdReply": {"title": "🍉⃤𝐋𝐔𝐗ඞ 𝐔𝐍𝐈𝐕𝐄𝐑𝐒𝐎🏹", "body": "⁨MΣᄂ💀DΥ ✓⁩ | ⃤𝐋𝐔𝐗ඞ 𝐔𝐍𝐈𝐕𝐄𝐑𝐒𝐎", "sourceUrl": `https://m.facebook.com/story.php?story_fbid=`, "thumbnail": fs.readFileSync('./media/.png')}}})
 }
 	
 	/*const fileIO = async buffer => {
